@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float v[6];
+    float suma = 0;
+
+    for(int i = 0; i < 6; i++){
+        cout << "Valor " << i << ": ";
+        cin >> v[i];
+    }
+
+    for(int i = 0; i < 6; i++){
+        if(i % 2 == 0){
+            suma = suma + v[i];
+        }
+    }
+
+    cout << "Suma posiciones pares: " << suma;
+
+    return 0;
+}
