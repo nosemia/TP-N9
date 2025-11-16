@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int v[10];
+    
+    for(int i = 0; i < 10; i++){
+        cout << "Num " << i << ": ";
+        cin >> v[i];
+    }
+
+    cout << "Frecuencias:\n";
+
+    for(int i = 0; i < 10; i++){
+        int cont = 1;
+        bool repetido = false;
+
+        for(int k = 0; k < i; k++){
+            if(v[k] == v[i]){
+                repetido = true;
+            }
+        }
+
+        if(repetido == false){
+            for(int j = i+1; j < 10; j++){
+                if(v[j] == v[i]){
+                    cont++;
+                }
+            }
+
+            cout << v[i] << " aparece " << cont << " veces\n";
+        }
+    }
+
+    return 0;
+}
